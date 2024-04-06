@@ -1,3 +1,4 @@
+'''
 print("First line.")
 print(4+2)
 a= 12 
@@ -22,3 +23,21 @@ print("Hi my name is "+a1+" Sathe")
 print(f"Hello, my name is {a1}") #Format String
 print('Hi! Myself "Pritish"')
 print("Hi! Myself 'Pritish Sathe'")
+
+
+name = input("Enter your name:")
+print(name)
+print(type(name))
+
+number = int(input("Enter a number: "))
+print(number)
+print(type(number))
+'''
+
+a = 12
+print(a)
+print(type(a))
+k=str(a)
+print(k)
+print(type(k))
+
