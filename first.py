@@ -42,7 +42,7 @@ print(k)
 print(type(k))
 '''
 
-firstName = input("Enter your first name: ")
+'''firstName = input("Enter your first name: ")
 lastName= input("Last name: ")
 place = input("Enter a place: ")
 yob = int(input("Enter year of birth: "))
@@ -53,4 +53,16 @@ print(f"""My name is {firstName}
 I was born at {place},
 {firstName} is currently {age} years old.
 Email id of user is {lastName}.{firstName}@gmail.com""") #Format String
+'''
+
+'''name = input("Enter your name: ")
+reverse = name[::-1]
+print(reverse)
+
+print(name)
+print()
+if name == reverse:
+    print("String is palindrome.")
+else:
+    print("String is not palindrome.")'''
 

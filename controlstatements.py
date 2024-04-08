@@ -50,9 +50,9 @@ else:
     print("Criteria is unfullfilled.")
     print("Student is not eligible for the examination.")'''
 
-'''name=input("Enter the name: ")
+name=input("Enter the name: ").capitalize()
 
 if name == "Pritish":
     print(f"{name} is an aspiring data scienctist.")
 else:
-    print(f"{name} might be an engineer.")'''
+    print(f"{name} might be not be an aspiring data scientist.")
