@@ -1,3 +1,4 @@
+'''
 stations= ['Badnera', 'Murtizapur', 'Akola', 'Shegaon', 'Malkapur']
 
 for station in stations:
@@ -26,7 +27,7 @@ else:
     print("Your journey is completed.")
 
 
-
+'''
 
 '''
 
@@ -61,11 +62,74 @@ else:
 '''
 
 
+'''
+
+list_of_names = list()
+total_names = int(input("Total names to be added to the list of names: "))
+max_length = 0
+string = ""
+
+for names in range(0, total_names):
+    name = input('Enter your name:')
+    list_of_names = list_of_names + [name]
+    if max_length < len(list_of_names[names]):
+        max_length = len(list_of_names[names])
+        string = list_of_names[names]
+print(f"{list_of_names}")
+print(f"Longest String is {string} and length of the {string} is {max_length}")
+
+'''
 
 
 
 
+list_of_names = list()
+total_names = int(input("Total names to be added to the list of names: "))
+i = 1
+iterator = 0
+max_len = 0
+string = ""
 
+while i <= total_names:
+    name = input('Enter your name:')
+    list_of_names = list_of_names + [name]
+    i = i + 1
+    if max_len < len(list_of_names[iterator]):
+        max_len = len(list_of_names[iterator])
+        string = list_of_names[iterator]
+    iterator += 1
+
+print(f"{list_of_names}")
+print(f"{string} is a longest string with the length of: {max_len}")
+
+
+
+
+'''list_of_item = list()
+total_items = int(input("Total items you want to add:"))
+item = 1 
+
+while item <= total_items:
+    item_added = input(f"Enter the {item} item that you want to add:")
+    list_of_item = list_of_item + [item_added]
+    #list_of_item.append(item_added)
+    print(f"Item {item} is {item_added}")
+    print('----')
+    item = item + 1
+
+print(f"Items in the list are:{list_of_item} \n")
+
+element = input("Enter the item you want to search in the list:")
+
+if element not in list_of_item:
+    print(f"{element} is not in the list.")
+    print(f"Adding {element} to the list")
+    list_of_item = list_of_item + [element]
+    print(f"Updated list is: {list_of_item}")
+else:
+    print(f"{element} is in the list.")
+    print(f"The list is: {list_of_item}")
+'''
 
 
 
@@ -162,3 +226,9 @@ else:
 print('Done')
 
 '''
+
+
+ 
+
+
+
