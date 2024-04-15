@@ -28,7 +28,7 @@ else:
 
 
 '''
-
+#------------------------------------------------------------------------------------------------------
 '''
 
 stations= ['Badnera', 'Murtizapur', 'Akola', 'Shegaon', 'Malkapur']
@@ -60,8 +60,7 @@ else:
     print("Your journey is completed.")
 
 '''
-
-
+#------------------------------------------------------------------------------------------------------
 '''
 
 list_of_names = list()
@@ -79,9 +78,7 @@ print(f"{list_of_names}")
 print(f"Longest String is {string} and length of the {string} is {max_length}")
 
 '''
-
-
-
+#------------------------------------------------------------------------------------------------------
 
 list_of_names = list()
 total_names = int(input("Total names to be added to the list of names: "))
@@ -102,10 +99,9 @@ while i <= total_names:
 print(f"{list_of_names}")
 print(f"{string} is a longest string with the length of: {max_len}")
 
-
-
-
-'''list_of_item = list()
+#------------------------------------------------------------------------------------------------------
+'''
+list_of_item = list()
 total_items = int(input("Total items you want to add:"))
 item = 1 
 
@@ -130,14 +126,8 @@ else:
     print(f"{element} is in the list.")
     print(f"The list is: {list_of_item}")
 '''
-
-
-
-
-
-
+#------------------------------------------------------------------------------------------------------
 '''
-
 cost_of_item=[200,500,100,400]
 
 total_cost=0
@@ -149,9 +139,8 @@ for total in cost_of_item:
 else: print(f"Total cost is: {total_cost}")
 
 '''
-
+#------------------------------------------------------------------------------------------------------
 '''
-
 cost_of_item=[200,500,100,400]
 
 total_cost=0
@@ -163,17 +152,16 @@ for total in range(len(cost_of_item)):
     print(f"Total cost after iteration: : {total_cost}")
     print('----')
 else: print(f"Total cost is: {total_cost}")
-
-
 '''
-
-
-'''li = ['Pritish', 'Dinesh', 'Sathe', 27, 'M']
+#------------------------------------------------------------------------------------------------------
+'''
+li = ['Pritish', 'Dinesh', 'Sathe', 27, 'M']
 for i in li:
-    print(i)'''
-
-
-'''scores = [100,200,300,400,500]
+    print(i)
+'''
+#------------------------------------------------------------------------------------------------------
+'''
+scores = [100,200,300,400,500]
 number = 0
 cutoff = 500 
 while scores[number] < cutoff:
@@ -182,11 +170,9 @@ while scores[number] < cutoff:
     print("--------------------------------")
 else:
     print(f"Cutoff reached.{cutoff}")
-
 '''
+#------------------------------------------------------------------------------------------------------
 '''
-
-
 total_marks = 1000
 cutoff = 400
 scores = [100, 200, 300, 399, 500]
@@ -198,13 +184,9 @@ while scores[year] < cutoff:
     year = year + 1
     if scores[year] > cutoff:
         print(f"You have scored: {cutoff}. Congratulations! You have passed the exam.")
-
-
 '''
-
-
+#------------------------------------------------------------------------------------------------------
 '''
-
 number = 23
 running = True
 
@@ -226,9 +208,24 @@ else:
 print('Done')
 
 '''
+#------------------------------------------------------------------------------------------------------
+li = [2+3j, "Pritish", 5+6j, "Sathe", 5]
 
 
- 
+for i in li:
+    if isinstance(i, (complex, str, int)):
+        print(f"The element: {i} | type: {type(i)} | at Index: {li.index(i)}")
+
+#------------------------------------------------------------------------------------------------------
+'''
+ li = [["item 1", 1000], ["item 2",1000], ["item 3", 3000]]
+total = 0
+for i in li:
+    print(f"Item {i[0]} costs {i[1]}")
+    total = total + i[1]
+
+print("\nAdding total cost of the items:", total)
+'''
 
 
 
