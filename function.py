@@ -1,4 +1,5 @@
 import socket
+import os
 
 '''
 def test():
@@ -81,10 +82,9 @@ print(newlist)
 '''
 name = input("Enter the string you want to measure: ")
 def length(para):
-        """ This function returns the length of the string""""
-    
+    """ This function returns the length of the string """
     length = 0
-    for i in range(len(para)):
+    for i in para:
         length = length + 1
     return length
 result = length(name)
@@ -92,21 +92,16 @@ print(f"Length of the string is: {result}")
 '''
 #----------------------------------------------------------------
 '''
-li = ["Shree", "Pritish", "Dinesh", "Sathe"]
-element = input("Enter the element you wish to search:")
+li = [1,2, "Pritish", "Dinesh", "Sathe"]
 
-def index(name, ele):
-    """ This function returns the index of the string.""""
-    
-    for i in range(len(li)):
-        if element == li[i]:
-            #print("Hi!")
-            return i
-        
-result = index(li,element)
-print(f"{element} is found at index {result}")
+def count(li):
+    for item in range(len(li)):
+        print(f"{li[item]} is at index {item}.")
+
+print(count(li))
 '''
 #----------------------------------------------------------------
+
 '''
 def getNameandIP():
     """ This function returns the name and IP of the system.""""
@@ -131,5 +126,29 @@ def getIP():
 getIP()
 '''
 #----------------------------------------------------------------
+''''
+def shutdown():
+    """This function shuts down the system in /t time"""
 
+    os.system('shutdown /s /t 1') 
+
+shutdown()
+'''
+#----------------------------------------------------------------
+'''
+lis=[2,2,2.5,"Pritish", "Dinesh", "Sathe"]
+
+def mul(lst):
+   """This function returns the multiplication of only float and interger values from a list."
+
+    result = 1
+    for item in lst:
+        if isinstance(item,int) or isinstance(item,float):
+            result *= item
+    return result
+
+result = mul(lis)
+print("Result is: ", result)
+'''
+#----------------------------------------------------------------
 
