@@ -152,3 +152,43 @@ print("Result is: ", result)
 '''
 #----------------------------------------------------------------
 
+'''
+items_list = list()
+
+def fill():
+    noi = int(input("Number of items you want to fill: "))
+    for items in range(noi):
+        items=input("Enter the list of items you want to add to the list:")
+        items_list.append(items)
+    return items_list
+
+a = fill()
+print(a)
+'''
+#----------------------------------------------------------------
+'''
+def filler(*args):
+    lis = []
+    for i in args:
+        lis.append(i)
+    return lis
+
+print(filler(1,2,3,4,5,6))
+'''
+#----------------------------------------------------------------
+
+#Wrapping arguments
+'''
+def concat(*args, sep="/"):
+    return sep.join(args)
+
+print(concat("earth", "mars", "venus", sep=','))
+'''
+#----------------------------------------------------------------
+
+#Wrapping arguments in range
+'''
+lis = [1,11]
+print(list(range(*lis)))
+'''
+#----------------------------------------------------------------
