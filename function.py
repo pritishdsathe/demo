@@ -192,3 +192,183 @@ lis = [1,11]
 print(list(range(*lis)))
 '''
 #----------------------------------------------------------------
+#Function inside a function as a parameter.
+'''
+def test1(a):
+   a = a**a
+   return a
+
+def test2(func):
+   return func(4)
+
+print(test2(test1))
+#print(k)
+'''
+#----------------------------------------------------------------
+'''
+def test1():
+    return "Prit"
+
+def test2(func):
+    return func()
+
+print(test2(test1))
+'''
+#----------------------------------------------------------------
+'''
+def test1(**args):
+    return args
+
+def test2(func):
+    a = {"Pritish": "Sathe", "Shreya": "Koranne"}
+    return func(**a)
+
+print(type(test2(test1)))
+'''
+#----------------------------------------------------------------
+'''
+def test1(**args):
+    print("I am inside test 1")
+
+    def test2(func):
+        print("I am inside test 2")
+    
+    def test3(func):
+        print("I am inside test 3")
+        
+        
+'''
+#----------------------------------------------------------------
+'''
+def func(func):
+    print("I am inside test")
+    def func2():
+        
+        """This is a wrapper function. """
+        
+        print("I am inside func2")
+        return func()
+    return func2
+
+@func       #Decorator
+def test1():
+    #print("I am inside test 1")
+    return 5+6
+
+a = test1() + 5
+print(a)
+print(type(a))
+'''
+#----------------------------------------------------------------
+'''
+def test1(func):
+    """Function with *args""""
+
+    def test2(*args):
+        func(*args)
+        #print(func(*args))
+        print("This is function 2.")
+        return func(*args)
+    return test2
+
+@test1
+def test3(a, b, c):
+    return a + b + c
+
+a = test3(2,4,6)
+print(a)
+#print(a)
+print(type(a))
+#print(type(test3))
+'''
+#----------------------------------------------------------------
+'''
+def test1(func):
+    def test2(*args, **kwargs):
+        func(*args, **kwargs)
+        #print(func(*args, *kwargs))
+        print("This is function 2.")
+        return func(*args, **kwargs)
+    return test2
+
+@test1
+def test4(**kwargs):
+    return kwargs       
+
+b = test4(a = 5, b = 14)
+print(b)
+print(type(b))
+'''
+#----------------------------------------------------------------
+'''
+v = lambda *args: args
+print(v(1))
+print(type(v))
+'''
+#----------------------------------------------------------------
+'''
+l = [1,2,3,4,5,6,7]
+li = []
+for i in l:
+    i = i + 10
+    li.append(i)
+print(li)
+'''
+#----------------------------------------------------------------
+'''
+l = [1,2,3,4,5,6,7]
+def test1(a):
+    return a+10
+
+print(list(map(test1,l) ))
+'''
+#----------------------------------------------------------------
+'''
+l = [1,2,3,4,5,6,7]
+print(list(map(lambda a: a+10, l)))
+'''
+#----------------------------------------------------------------
+'''
+l = ['pritish', 'dinesh', 'sathe']
+
+def convert(l):
+    return l.upper()
+    
+
+print(list(map(convert, l)))
+'''
+#----------------------------------------------------------------
+'''
+l = ['pritish', 'dinesh', 'sathe']
+
+def cal(a):
+    return len(a)
+
+print(list(map(cal,l)))
+'''
+#----------------------------------------------------------------
+'''
+l = [1,2,3,4,5,6,7,8,9,10]
+
+def even(a):
+    l1 = []
+    if type(a) == list:
+        for i in a:
+            if i%2==0:
+                l1.append(i)
+    return l1
+
+num = even(l)
+print(num)
+'''
+#----------------------------------------------------------------
+
+l = [1,2,3,4,5,6,7,8,9,10]
+
+def even(a):
+    if a%2 == 0:
+        return a
+
+#Filter function. It basically returns True or False
+
+print(list(filter(even, l)))

@@ -54,8 +54,33 @@ for item in data.keys():
 print(list_mentors)
 '''
 #----------------------------------------------------------------
+'''
+data = {"name": "Pritish", "mentor":{"Python": "shreya", "AI": "advait", "Stats":"riya"}, "email_id": {"shreya": "shreya@gmail.com", "advait": "advait@gmail.com", "riya":"riya@gmail.com"}}
 
-data = {"name": "Pritish", "mentor":{"Python": "Shreya", "AI": "Advait", "Stats":"Riya"}}
+def get_list_detail(data):
+   list_detail = []
+   for item in data:
+      if type(data[item]) == dict:
+         list_detail.append(list(data[item].values()))
+         return list_detail
 
-for item in data:
-   print(data[item])
+result = get_list_detail(data)
+print(result)
+'''
+#----------------------------------------------------------------
+'''
+data = {"name": "Pritish", "mentor":{"Python": "shreya", "AI": "advait", "Stats":"riya"}, "email_id": {"shreya": "shreya@gmail.com", "advait": "advait@gmail.com", "riya":"riya@gmail.com"}}
+#data["mobile_no"] = [9975152957, 9284081490, 9298979695]
+#print(data)
+data["name"] = "Pritish Sathe"
+print(data)
+'''
+#----------------------------------------------------------------
+'''
+def adding(**kwargs):
+   return kwargs
+
+data = {"Pritish": "Sathe", "Shreya": "Koranne", "Advait":"Deogade", "mobile": {"Pritish": '9284081490', "Shreya": '9796959493', "Advait":'9695949392'}}
+detail = adding(**data)
+print(detail)
+'''
